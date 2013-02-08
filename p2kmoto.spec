@@ -4,7 +4,7 @@
 Name:		p2kmoto
 Summary:	Software intended to be used with Motorola telephones based on the P2K platform
 Version:	0.1.%{svnversion}
-Release:	1
+Release:	2
 Url:		http://moto4lin.sourceforge.net/
 Source0:	p2kmoto-%{svnversion}.tar.bz2
 Patch0:		fix-no-return-in-nonvoid-function.patch
@@ -17,7 +17,8 @@ BuildRequires:	libusb-devel >= 0.1.8
 Requires:	%{lib_name}%{soname} = %{version}-%{release}
 
 %description
-The moto4lin software is intended to be used with Motorola telephones based on the P2K platform.
+The moto4lin software is intended to be used with Motorola telephones based on
+the P2K platform.
 
 %package -n %{lib_name}%{soname}
 Summary:	Software intended to be used with Motorola telephones based on the P2K platform
@@ -26,7 +27,8 @@ Provides:	%{lib_name}%{soname} = %{version}-%{release}
 Provides:	%{lib_name} = %{version}-%{release}
 
 %description -n  %{lib_name}%{soname}
-The moto4lin software is intended to be used with Motorola telephones based on the P2K platform.
+The moto4lin software is intended to be used with Motorola telephones based on
+the P2K platform.
 
 %package -n p2kmoto-devel
 Summary:	Software intended to be used with Motorola telephones based on the P2K platform
@@ -35,7 +37,8 @@ Provides:	p2kmoto-devel = %{version}-%{release}
 Requires:	%{lib_name}%{soname} = %{version}-%{release}
 
 %description -n p2kmoto-devel
-The moto4lin software is intended to be used with Motorola telephones based on the P2K platform.
+The moto4lin software is intended to be used with Motorola telephones based on
+the P2K platform.
 
 %prep
 %setup -q -n %{name}-%{svnversion}
@@ -49,7 +52,7 @@ export CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS"
 make -j 2
 
 %install
-make DESTDIR=$RPM_BUILD_ROOT install
+make DESTDIR=%{buildroot} install
 
 rm -fr %{buildroot}%{_libdir}/*.*a
 
