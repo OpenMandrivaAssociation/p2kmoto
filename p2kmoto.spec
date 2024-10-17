@@ -5,7 +5,7 @@ Name:		p2kmoto
 Summary:	Software intended to be used with Motorola telephones based on the P2K platform
 Version:	0.1.%{svnversion}
 Release:	3
-Url:		http://moto4lin.sourceforge.net/
+Url:		https://moto4lin.sourceforge.net/
 Source0:	p2kmoto-%{svnversion}.tar.bz2
 Patch0:		fix-no-return-in-nonvoid-function.patch
 License:	GPL
