@@ -10,6 +10,8 @@ Source0:	p2kmoto-%{svnversion}.tar.bz2
 Patch0:		fix-no-return-in-nonvoid-function.patch
 License:	GPL
 Group:		Networking/File transfer
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool 
